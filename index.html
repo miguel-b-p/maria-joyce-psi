@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maria Joyce - Psicóloga | Especialista em Saúde Mental</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="dist/output.css">
+	<link rel="icon" href="images/icon_page.png">
+</head>
+<body class="font-raleway text-gray-800">
+	<header class="fixed w-full bg-gradient-to-r from-white via-white to-blue-50 shadow-lg z-50 transition-all duration-300">
+		<nav class="container mx-auto px-4 py-4">
+			<div class="flex justify-between items-center">
+				<div class="flex items-center space-x-3 group">
+					<div class="relative">
+						<div class="absolute inset-0 bg-primary/10 rounded-full transform scale-110 transition-transform duration-300"></div>
+						<img src="images/icon.png" alt="Maria Joyce" class="h-14 w-14 relative z-10 logo-pulse">
+					</div>
+					<div>
+						<span class="font-playfair text-2xl text-primary block">Maria Joyce</span>
+						<span class="text-sm text-gray-600">Psicóloga CRP 06/205024</span>
+					</div>
+				</div>
+				
+				<!-- Mobile menu button -->
+				<button class="md:hidden text-gray-600 hover:text-primary focus:outline-none" aria-label="Menu">
+					<i class="fas fa-bars text-2xl"></i>
+				</button>
+
+				<!-- Desktop menu -->
+				<ul class="hidden md:flex space-x-8 items-center">
+					<li>
+						<a href="#home" class="relative text-gray-700 hover:text-primary transition-colors py-2">
+							<span class="relative z-10">Início</span>
+							<span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#about" class="relative text-gray-700 hover:text-primary transition-colors py-2">
+							<span class="relative z-10">Sobre</span>
+							<span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#services" class="relative text-gray-700 hover:text-primary transition-colors py-2">
+							<span class="relative z-10">Serviços</span>
+							<span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors shadow-md hover:shadow-lg">
+							Contato
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Mobile menu (hidden by default) -->
+			<div class="md:hidden">
+				<div class="hidden py-4 space-y-4">
+					<a href="#home" class="block text-gray-700 hover:text-primary transition-colors">Início</a>
+					<a href="#about" class="block text-gray-700 hover:text-primary transition-colors">Sobre</a>
+					<a href="#services" class="block text-gray-700 hover:text-primary transition-colors">Serviços</a>
+					<a href="#contact" class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors">Contato</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<script>
+		// Add scroll effect to header
+		window.addEventListener('scroll', function() {
+			const header = document.querySelector('header');
+			if (window.scrollY > 50) {
+				header.classList.add('py-2', 'shadow-xl');
+				header.classList.remove('py-4', 'shadow-lg');
+			} else {
+				header.classList.remove('py-2', 'shadow-xl');
+				header.classList.add('py-4', 'shadow-lg');
+			}
+		});
+
+		// Mobile menu toggle
+		const menuButton = document.querySelector('button[aria-label="Menu"]');
+		const mobileMenu = document.querySelector('.md\\:hidden .hidden');
+		
+		menuButton.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+		});
+	</script>
+
+	<main>
+		<section id="home" class="pt-24 md:pt-32 bg-gradient-to-br from-blue-50 to-white">
+			<div class="container mx-auto px-4 py-16">
+				<div class="grid md:grid-cols-2 gap-8 items-center">
+					<div class="space-y-6">
+						<h1 class="font-playfair text-5xl md:text-6xl text-secondary">Maria Joyce</h1>
+						<p class="text-xl text-gray-600"><i class="fas fa-brain text-primary"></i> Psicóloga, especialista em Saúde Mental e Psiquiatria</p>
+						<div class="space-y-4">
+							<p class="flex items-center space-x-2"><i class="fas fa-user-friends text-primary"></i> <span>Atendimento Psicológico Online para adultos e idosos</span></p>
+							<p class="flex items-center space-x-2"><i class="fas fa-heart text-primary"></i> <span>Terapia de Casal Online</span></p>
+						</div>
+						<div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+							<a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-center">
+								<i class="fas fa-calendar-alt mr-2"></i> Agende sua Consulta Online
+							</a>
+							<a href="#about" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors text-center">
+								<i class="fas fa-user mr-2"></i> Conheça mais sobre mim
+							</a>
+						</div>
+					</div>
+					<div class="hidden md:block">
+						<img src="images/maria.png" alt="Maria Joyce - Psicóloga" class="w-full max-w-md mx-auto">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="quote" class="bg-secondary text-white py-16">
+			<div class="container mx-auto px-4">
+				<blockquote class="text-center">
+					<p class="text-2xl md:text-3xl font-playfair italic mb-4">"O propósito de uma terapia não é fazer alguém ser 'normal', é levar alguém a descobrir e respeitar o seu desejo."</p>
+					<cite class="text-lg">Contardo Calligaris</cite>
+				</blockquote>
+			</div>
+		</section>
+
+		<section id="about" class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-playfair text-center mb-12 text-secondary">Sobre Mim</h2>
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					<div class="space-y-6">
+						<p class="text-xl font-medium text-primary">Bem-vindo(a)! Sou Maria Joyce, psicóloga.</p>
+						<div class="space-y-4 text-gray-600">
+							<p>Minha motivação como profissional vai além das teorias: é o encontro com cada pessoa, suas histórias, emoções e vivências, que realmente molda minha trajetória.</p>
+							<p>Com 12 anos de experiência, minha atuação abrange as áreas clínica, hospitalar e no Centro de Atenção Psicossocial (CAPS). Sou especialista em Saúde Mental e Psiquiatria, além de Psicologia Hospitalar.</p>
+							<p>Entendo que o processo de cura pode ser desafiador, mas estarei com você em cada passo, buscando transformar dificuldades em oportunidades de crescimento pessoal.</p>
+						</div>
+					</div>
+					<div class="hidden md:block">
+						<img src="images/maria.png" alt="Maria Joyce - Psicóloga" class="w-full max-w-md mx-auto rounded-lg shadow-xl">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-playfair text-center mb-12 text-secondary">Dor é convite?</h2>
+				<div class="max-w-3xl mx-auto space-y-6 text-gray-700">
+					<p class="text-xl font-medium text-primary">A dor é um convite para a transformação.</p>
+					<p>Quando sentimos dor, seja física ou emocional, estamos sendo chamados a prestar atenção a algo que, muitas vezes, tentamos ignorar ou silenciar dentro de nós. Ela é um sinal do nosso corpo, um alerta de que algo não está bem e precisa ser cuidado.</p>
+					<p>A dor pode, sim, ser curada quando a ouvimos e a compreendemos. No entanto, há aquelas dores que não desaparecem facilmente. Para essas, o processo de ressignificação é fundamental — transformar o significado que essa dor tem na nossa história e encontrar um novo caminho para seguir em frente.</p>
+					<blockquote class="border-l-4 border-primary pl-4 italic">
+						<p>"Nenhuma terapia pode alterar os fatos de uma vida, mas pode alterar a narrativa dos fatos, e isso talvez seja decisivo." - Contardo Calligaris</p>
+					</blockquote>
+					<p>O poder está em escutar a si mesmo, em reescrever a sua história e dar um novo significado às experiências dolorosas.</p>
+					<p>Se você sente que a dor está ocupando um lugar importante demais na sua vida, a psicoterapia pode ser o primeiro passo para começar a transformação. Estou aqui para te apoiar nesse processo, ajudando a criar novas perspectivas e a encontrar cura para as feridas que ainda te afligem.</p>
+					<p class="text-xl font-medium text-primary">A saída é se escutar! Vamos juntos?</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-playfair text-center mb-12 text-secondary">Notas sobre pausa</h2>
+				<div class="max-w-3xl mx-auto space-y-6 text-gray-700">
+					<div class="bg-gray-50 p-6 rounded-lg">
+						<p class="italic text-lg mb-2">PAUSA</p>
+						<p class="text-gray-600">substantivo feminino. suspensão temporária de ação ou movimento.</p>
+					</div>
+					<p>No ritmo acelerado da vida cotidiana, será que conseguimos encontrar um espaço para a pausa? Muitas vezes, nossa rotina se transforma em um emaranhado de compromissos e responsabilidades. Entre a agenda lotada e a constante enxurrada de informações, o tempo para respirar parece escasso. No entanto, a pausa é fundamental. Ela é uma oportunidade preciosa para reabastecer nossa energia, para nos reconectar com o que realmente importa.</p>
+					<p class="text-xl font-medium text-primary">Te convido a fazer essa suspensão temporária de ação e movimento, desacelerar e permitir-se esse respiro necessário!</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-playfair text-center mb-12 text-secondary">Caraminholas</h2>
+				<div class="max-w-3xl mx-auto space-y-6 text-gray-700">
+					<div class="bg-white p-6 rounded-lg">
+						<p class="italic text-lg mb-2">substantivo feminino.</p>
+						<p class="text-gray-600">5. [Informal] Fantasia, ilusão (ex.: tinha a cabeça cheia de caraminholas)</p>
+					</div>
+					<p>Quem nunca ficou com a cabeça cheia de caraminholas, se sentindo perdido em meio a tantos sentimentos? Isso é completamente natural. Em alguns momentos, nossas emoções podem se misturar de uma forma que nos deixa com a sensação de não saber exatamente o que estamos vivenciando. Identificar e nomear essas emoções nem sempre é simples. Muitas vezes, o que sentimos é tão complexo e multifacetado que é difícil até entender de onde vem, ou como descrevê-lo.</p>
+					<p>É importante lembrar que algumas coisas são fatos concretos, enquanto outras podem ser apenas caraminholas, alimentadas por nossos medos, ansiedades ou inseguranças. O essencial, nesse processo, é se permitir sentir, sem julgamento. Exercitar a escuta atenta dos próprios sentimentos pode nos ajudar a entender melhor o que estamos vivendo. E, se necessário, buscar apoio para nomear essas emoções e aprender a lidar com essas caraminholas de maneira mais saudável e construtiva. O sentir é parte de quem somos, e entendê-lo é um passo importante para o autoconhecimento.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="services" class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-playfair text-center mb-12 text-secondary">Áreas de Atuação</h2>
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+						<i class="fas fa-user-alt text-4xl text-primary mb-4"></i>
+						<h3 class="text-xl font-playfair mb-4">Psicoterapia Individual Online</h3>
+						<p class="text-gray-600">Atendimento especializado para adultos e idosos no conforto do seu lar</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+						<i class="fas fa-heart text-4xl text-primary mb-4"></i>
+						<h3 class="text-xl font-playfair mb-4">Terapia de Casal Online</h3>
+						<p class="text-gray-600">Suporte para fortalecer relacionamentos com praticidade e privacidade</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+						<i class="fas fa-brain text-4xl text-primary mb-4"></i>
+						<h3 class="text-xl font-playfair mb-4">Saúde Mental</h3>
+						<p class="text-gray-600">Especialista em saúde mental e psiquiatria com atendimento 100% online</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+						<i class="fas fa-clock text-4xl text-primary mb-4"></i>
+						<h3 class="text-xl font-playfair mb-4">Flexibilidade</h3>
+						<p class="text-gray-600">Atendimento online adaptado à sua rotina e necessidades</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="benefits" class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-playfair text-center mb-12 text-secondary">Por que escolher a psicoterapia online?</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="p-6 border border-gray-200 rounded-lg hover:border-primary transition-colors">
+						<i class="fas fa-home text-4xl text-primary mb-4"></i>
+						<h3 class="text-xl font-playfair mb-4">Adequação ao seu tempo e ritmo</h3>
+						<p class="text-gray-600">Você pode realizar a terapia de qualquer lugar, seja no conforto da sua casa ou em outro ambiente tranquilo.</p>
+					</div>
+					<div class="p-6 border border-gray-200 rounded-lg hover:border-primary transition-colors">
+						<i class="fas fa-calendar-check text-4xl text-primary mb-4"></i>
+						<h3 class="text-xl font-playfair mb-4">Acessibilidade e Flexibilidade</h3>
+						<p class="text-gray-600">A psicoterapia online permite que você agende sessões conforme sua disponibilidade.</p>
+					</div>
+					<div class="p-6 border border-gray-200 rounded-lg hover:border-primary transition-colors">
+						<i class="fas fa-globe text-4xl text-primary mb-4"></i>
+						<h3 class="text-xl font-playfair mb-4">Apoio contínuo em qualquer lugar</h3>
+						<p class="text-gray-600">Mesmo quando você viaja ou muda de cidade, pode continuar o acompanhamento psicológico sem interrupções.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="py-16 bg-primary text-white">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-playfair text-center mb-12">Vamos Conversar?</h2>
+				<div class="max-w-2xl mx-auto text-center space-y-6">
+					<p class="text-xl"><i class="fas fa-comments mr-2"></i> Faça sua terapia de onde estiver, com toda a qualidade e sigilo.</p>
+					<p class="text-xl"><i class="fas fa-phone mr-2"></i> Entre em contato pelo WhatsApp para marcarmos sua sessão ou tirar suas dúvidas:</p>
+					<p class="text-2xl font-medium">
+						<a href="https://wa.me/5517997352797" target="_blank" class="hover:text-white/80 transition-colors inline-flex items-center">
+							<i class="fab fa-whatsapp mr-2"></i> +55 (17) 99735-2797
+						</a>
+					</p>
+					<p class="text-lg"><i class="fas fa-id-card mr-2"></i> CRP 06/205024</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="bg-secondary text-white py-8">
+		<div class="container mx-auto px-4">
+			<div class="grid md:grid-cols-2 gap-8 items-center mb-8">
+				<div>
+					<h3 class="text-2xl font-playfair mb-4">Maria Joyce</h3>
+					<p class="mb-2"><i class="fas fa-brain mr-2"></i> Psicóloga | Atendimento Online</p>
+					<p><i class="fas fa-certificate mr-2"></i> Especialista em Saúde Mental</p>
+				</div>
+				<div class="text-right">
+					<a href="#" class="text-3xl hover:text-white/80 transition-colors" aria-label="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+			<div class="text-center text-sm text-white/80">
+				<p>&copy; 2024 Maria Joyce. Todos os direitos reservados.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
